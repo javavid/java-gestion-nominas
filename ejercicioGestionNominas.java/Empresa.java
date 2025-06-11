@@ -5,7 +5,7 @@ public class Empresa {
     private int nit;
     private String nameEmpresa;
     private ArrayList<Trabajador>job;
-    public Empresa(int nit, String nameEmpresa, ArrayList<Trabajador> job) {
+    public Empresa(int nit, String nameEmpresa) {
         this.nit = nit;
         this.nameEmpresa = nameEmpresa;
         // Inicializa la lista de trabajadores, evitando errores por valores nulos
