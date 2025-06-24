@@ -1,7 +1,11 @@
-public class Gestion extends Trabajador{
+public abstract class Gestion extends Trabajador{
+
+    protected int antiguedad;
     
-    public Gestion(String nombre, int cedula, double salarioBase, double salarioFinal) {
-        super(nombre, cedula, salarioBase, salarioFinal);
-        
+    public Gestion(String nombre, int cedula, double salarioBase, int antiguedad) {
+        super(nombre, cedula, salarioBase);
+        this.antiguedad = antiguedad;
     }
+
+    
 }

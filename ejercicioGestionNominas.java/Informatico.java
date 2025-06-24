@@ -1,10 +1,12 @@
 
 
-public class Informatico extends Trabajador {
+public abstract class Informatico extends Trabajador {
 
-    public Informatico(String nombre, int cedula, double salarioBase, double salarioFinal) {
-        super(nombre, cedula, salarioBase, salarioFinal);
-        
+    protected String titulacion;
+
+    public Informatico(String nombre, int cedula, double salarioBase, String titulacion) {
+        super(nombre, cedula, salarioBase);
+        this.titulacion = titulacion;
     }
     
 }

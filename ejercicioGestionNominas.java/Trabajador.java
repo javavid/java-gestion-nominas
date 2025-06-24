@@ -1,15 +1,15 @@
-public class Trabajador {
+public abstract class Trabajador {
     
     private String nombre;
     private int cedula;
     private double salarioBase;
-    private double salarioFinal;
     
-    public Trabajador(String nombre, int cedula, double salarioBase, double salarioFinal) {
+    
+    public Trabajador(String nombre, int cedula, double salarioBase) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.salarioBase = salarioBase;
-        this.salarioFinal = salarioFinal;
+        
     }
 
     public String getNombre() {
@@ -36,13 +36,6 @@ public class Trabajador {
         this.salarioBase = salarioBase;
     }
 
-    public double getSalarioFinal() {
-        return salarioFinal;
-    }
-
-    public void setSalarioFinal(double salarioFinal) {
-        this.salarioFinal = salarioFinal;
-    }
-
+    public abstract double complemento();
     
 }

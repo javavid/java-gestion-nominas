@@ -1,10 +1,16 @@
-public class Analista extends Trabajador{
+public class Analista extends Informatico{
     
-    public Analista(String nombre, int cedula, double salarioBase, double salarioFinal) {
-        super(nombre, cedula, salarioBase, salarioFinal);
+    public Analista(String nombre, int cedula, double salarioBase, String titulacion) {
+        super(nombre, cedula, salarioBase, titulacion);
         
         
     }
+
+    @Override
+   public double complemento()
+   {
+     return getSalarioBase() + (getSalarioBase() * 0.30);
+   }
 
     @Override
     public String toString()
@@ -13,6 +19,6 @@ public class Analista extends Trabajador{
             "NOMBRE: " + getNombre() + 
             "\n CEDULA: " + getCedula() + 
             "\n SALARIOBASE: " + getSalarioBase() +
-            "\n SALARIOFINAL: " + getSalarioFinal();
+            "\n SALARIOFINAL: " + complemento();
         }
 }

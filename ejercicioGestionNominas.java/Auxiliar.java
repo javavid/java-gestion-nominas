@@ -1,7 +1,23 @@
-public class Auxiliar extends Trabajador{
+public class Auxiliar extends Gestion{
     
-    public Auxiliar(String nombre, int cedula, double salarioBase, double salarioFinal) {
-        super(nombre, cedula, salarioBase, salarioFinal);
+    public Auxiliar(String nombre, int cedula, double salarioBase, int antiguedad) {
+        super(nombre, cedula, salarioBase, antiguedad);
         
     }
+
+    @Override
+    public double complemento()
+    {
+        return getSalarioBase() + 100;
+    }
+
+    @Override
+    public String toString()
+        {
+            return 
+            "NOMBRE: " + getNombre() + 
+            "\n CEDULA: " + getCedula() + 
+            "\n SALARIOBASE: " + getSalarioBase() +
+            "\n SALARIOFINAL: " + complemento();
+        }
 }
