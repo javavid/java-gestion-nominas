@@ -4,4 +4,6 @@ public class Administrativo extends Trabajador{
         super(nombre, cedula, salarioBase, salarioFinal);
         
     }
+
+    
 }
