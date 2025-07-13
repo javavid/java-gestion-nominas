@@ -34,8 +34,19 @@ public class Empresa {
         }
 }
 
-    public void eliminirEmpleado(Empleado empleado)
+    public void eliminirEmpleado(String busquedaCc) throws EmpleadoNoEncontradoException
     {
+        for(int i = 0; i < empleado.size(); i++) {
+            Empleado emple = empleado.get(i);
+            if (emple.getCedula().equals(busquedaCc)) {
+                this.empleado.remove(i);
+                return ;
+                
+            }
+            
+        }
+        
+        throw new EmpleadoNoEncontradoException(busquedaCc);
 
     }
 

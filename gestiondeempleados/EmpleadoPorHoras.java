@@ -6,7 +6,7 @@ public class EmpleadoPorHoras extends Empleado {
     private double tarifaPorHora;
 
 
-    public EmpleadoPorHoras(String nombre, String apellido, int cedula, double salario, int hoarasTrabajadas, double tarifaPorHora) {
+    public EmpleadoPorHoras(String nombre, String apellido, String cedula, double salario, int hoarasTrabajadas, double tarifaPorHora) {
         super(nombre, apellido, cedula, salario);
         this.hoarasTrabajadas = hoarasTrabajadas;
         this.tarifaPorHora = tarifaPorHora;

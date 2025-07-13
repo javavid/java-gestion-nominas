@@ -5,6 +5,8 @@ public class Empresa {
     private int nit;
     private String nameEmpresa;
     private ArrayList<Trabajador>job;
+
+    
     public Empresa(int nit, String nameEmpresa) {
         this.nit = nit;
         this.nameEmpresa = nameEmpresa;

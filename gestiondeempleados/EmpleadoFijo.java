@@ -4,7 +4,7 @@ public class EmpleadoFijo extends Empleado {
 
      private double salarioMensual;
 
-     public EmpleadoFijo(String nombre, String apellido, int cedula, double salario, double salarioMensual) {
+     public EmpleadoFijo(String nombre, String apellido, String cedula, double salario, double salarioMensual) {
         super(nombre, apellido, cedula, salario);
         this.salarioMensual = salarioMensual;
      }

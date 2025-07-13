@@ -3,11 +3,11 @@ package gestiondeempleados;
 public abstract class Empleado {
     private String nombre;
     private String apellido;
-    private int cedula;
+    private String cedula;
     private double salario;
 
 
-    public Empleado(String nombre, String apellido, int cedula, double salario) {
+    public Empleado(String nombre, String apellido, String cedula, double salario) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -35,12 +35,12 @@ public abstract class Empleado {
     }
 
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
