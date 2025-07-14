@@ -5,9 +5,9 @@ public class PruebaGestionEmplados {
         
         Empresa em = new Empresa();
 
-        em.agregarEmpleado(new EmpleadoFijo("Ricardo", "montaño", "1234", 1450000, 1450000));
-        em.agregarEmpleado(new EmpleadoFijo("Marcela", "garces", "4321", 1444000, 1444000));
-        em.agregarEmpleado(new EmpleadoFijo("Pablo", "palmar", "5678", 1555000, 1555000));
+        em.agregarEmpleado(new EmpleadoFijo("Ricardo", "montaño", "1234", 1450000));
+        em.agregarEmpleado(new EmpleadoFijo("Marcela", "garces", "4321", 1444000));
+        em.agregarEmpleado(new EmpleadoFijo("Pablo", "palmar", "5678", 1555000));
 
         for (Empleado emp : em.getEmpleado()) {
             System.out.println(" ");
@@ -17,7 +17,7 @@ public class PruebaGestionEmplados {
         try {
             em.eliminirEmpleado("1122");
         } catch (EmpleadoNoEncontradoException e) {
-            System.out.println("Error " + e);
+            System.out.println("\n Error " + e);
         }
         
     }

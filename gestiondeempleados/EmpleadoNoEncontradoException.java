@@ -10,7 +10,7 @@ public class EmpleadoNoEncontradoException extends Exception {
 
     @Override
     public String toString() {
-        return "Empleado Con  Cedula " + noEncontrado + " No Existe ";
+        return " Empleado Con  Cedula " + noEncontrado + " No Existe ";
     }
 
     
