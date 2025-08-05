@@ -19,4 +19,11 @@ public class Autor extends Persona {
     this.generoLiterio = generoLiterio;
  }
 
+ @Override
+ public String toString() {
+   return 
+   "Autor generoLiterio= " + generoLiterio + 
+    super.toString();
+ }
+
 }
