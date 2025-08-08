@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Libro {
     
-    private String tutulo;
+    private String titulo;
     private Autor autor;
     private String editorial;
     private LocalDate fechaPlublicacion;
@@ -12,9 +12,9 @@ public class Libro {
     private double precio;
 
     
-    public Libro(String tutulo, Autor autor, String editorial, LocalDate fechaPlublicacion, String isbn,
+    public Libro(String titulo, Autor autor, String editorial, LocalDate fechaPlublicacion, String isbn,
             double precio) {
-        this.tutulo = tutulo;
+        this.titulo = titulo;
         this.autor = autor;
         this.editorial = editorial;
         this.fechaPlublicacion = fechaPlublicacion;
@@ -23,13 +23,13 @@ public class Libro {
     }
 
 
-    public String getTutulo() {
-        return tutulo;
+    public String getTitulo() {
+        return titulo;
     }
 
 
-    public void setTutulo(String tutulo) {
-        this.tutulo = tutulo;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
 
@@ -86,12 +86,12 @@ public class Libro {
     @Override
     public String toString() {
         return 
-        "tutulo " + tutulo + 
-        "autor " + autor + 
-        "editorial " + editorial + 
-        "fechaPlublicacion " + fechaPlublicacion + 
-        "isbn " + isbn + 
-        "precio " + precio;
+        " TITULO: " + titulo + 
+        "\n AUTOR" + autor + 
+        "\n EDITORIAL: " + editorial + 
+        "\n FECHAPUBLICACION: " + fechaPlublicacion + 
+        "\n ISBN: " + isbn + 
+        "\n PRECIO: " + precio;
     }
 
 

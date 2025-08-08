@@ -2,13 +2,13 @@ package sistemaDeBiblioteca;
 
 import java.util.ArrayList;
 
-import gestiondeempleados.EmpleadoNoEncontradoException;
+
 
 public class Biblioteca {
     
     private ArrayList<Libro>libro;
 
-    public Biblioteca(ArrayList<Libro> libro) {
+    public Biblioteca() {
         this.libro = (libro != null)? new ArrayList<>(libro) :new ArrayList<>();
     }
 
@@ -20,7 +20,7 @@ public class Biblioteca {
         this.libro = libro;
     }
 
-    public void agregarEmpleado(Libro libro)
+    public void agregarLibro(Libro libro)
     {
 
         if (libro != null) { 
@@ -31,11 +31,11 @@ public class Biblioteca {
 }
 
 
-    public void eliminirEmpleado(String isbnn) throws EmpleadoNoEncontradoException
+    public void eliminarLibro(String title) throws LibroNoEncontrado
     {
         for(int i = 0; i < libro.size(); i++) {
-            Libro emple = libro.get(i);
-            if (emple.getIsbn().equals(isbnn)) {
+            Libro li = libro.get(i);
+            if (li.getTitulo().equals(title)) {
                 this.libro.remove(i);
                 return ;
                 
@@ -43,7 +43,7 @@ public class Biblioteca {
             
         }
         
-        throw new EmpleadoNoEncontradoException(isbnn);
+        throw new LibroNoEncontrado(title);
 
     }
 

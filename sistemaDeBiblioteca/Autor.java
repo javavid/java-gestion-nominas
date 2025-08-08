@@ -4,26 +4,28 @@ import java.time.LocalDate;
 
 public class Autor extends Persona {
     
- private TipoLiterario generoLiterio;
+ private TipoLiterario generoLiterario;
 
  public Autor(String nombre, String apellido, LocalDate fechaNacimiento, TipoLiterario generoLiterio) {
     super(nombre, apellido, fechaNacimiento);
-    this.generoLiterio = generoLiterio;
+    this.generoLiterario = generoLiterio;
  }
 
- public TipoLiterario getGeneroLiterio() {
-    return generoLiterio;
+ public TipoLiterario getGeneroLiterario() {
+    return generoLiterario;
  }
 
- public void setGeneroLiterio(TipoLiterario generoLiterio) {
-    this.generoLiterio = generoLiterio;
+ public void setGeneroLiterario(TipoLiterario generoLiterario) {
+    this.generoLiterario = generoLiterario;
  }
 
  @Override
  public String toString() {
-   return 
-   "Autor generoLiterio= " + generoLiterio + 
-    super.toString();
+   return
+    " [" + super.toString() +
+   ", GENEROLITERARIO: " + generoLiterario + " ]\n";
+    
+
  }
 
 }
