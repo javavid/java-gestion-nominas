@@ -10,6 +10,6 @@ public class LibroNoEncontrado extends Exception {
 
     @Override
     public String toString() {
-        return " Empleado Con  Cedula " + noEncontrado + " No Existe ";
+        return " libro con Titulo: (" + noEncontrado + ") No Existe ";
     }
 }

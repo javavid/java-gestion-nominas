@@ -15,15 +15,18 @@ public class PruebaMain {
         bi.agregarLibro(new Libro("amor de primera", autor2, "librosCompany", LocalDate.of(2025, 10, 20), "-321-590-371", 30000));
 
 
+        
+
+        try {
+            bi.eliminarLibro("emprender");
+        } catch (LibroNoEncontrado e) {
+            System.out.println("\n Error " + e);
+        }
+
+
         for (Libro li : bi.getLibro()) {
             System.out.println(" ");
             System.out.println(li);
-        }
-
-        try {
-            bi.eliminarLibro("soledad");
-        } catch (LibroNoEncontrado e) {
-            System.out.println("\n Error " + e);
         }
 
     }
