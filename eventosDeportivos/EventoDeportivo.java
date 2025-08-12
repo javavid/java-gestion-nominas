@@ -9,6 +9,7 @@ public abstract class EventoDeportivo implements Ganador {
     private LocalDate fecha;
     private String lugar;
     private ArrayList<Participantes> participante;
+    
     public EventoDeportivo(String nombre, LocalDate fecha, String lugar, ArrayList<Participantes> participante) {
         this.nombre = nombre;
         this.fecha = fecha;

@@ -6,15 +6,18 @@ import java.util.ArrayList;
 public class Carrera extends EventoDeportivo{
     
     private double distancia;
-    private int tiempoRegistrado;
+
+    ArrayList<ParticipantesCarrera> participantesCarrera;
+    
 
     
 
     public Carrera(String nombre, LocalDate fecha, String lugar, ArrayList<Participantes> participante,
-            double distancia, int tiempoRegistrado) {
+            double distancia, ArrayList<ParticipantesCarrera> participantesCarreras ) {
         super(nombre, fecha, lugar, participante);
         this.distancia = distancia;
-        this.tiempoRegistrado = tiempoRegistrado;
+        this.participantesCarrera = participantesCarreras;
+        
     }
 
     public double getDistancia() {
@@ -25,20 +28,23 @@ public class Carrera extends EventoDeportivo{
         this.distancia = distancia;
     }
 
-    public int getTiempoRegistrado() {
-        return tiempoRegistrado;
+    public ArrayList<ParticipantesCarrera> getParticipantesCarrera() {
+        return participantesCarrera;
     }
 
-    public void setTiempoRegistrado(int tiempoRegistrado) {
-        this.tiempoRegistrado = tiempoRegistrado;
+    public void setParticipantesCarrera(ArrayList<ParticipantesCarrera> participantesCarrera) {
+        this.participantesCarrera = participantesCarrera;
     }
 
     @Override
     public ArrayList<Participantes> obtenerGanador() {
-        
+        ArrayList<Participantes> ganador = new ArrayList<>();
+        for (int i = 0; i < ganador.size(); i++) {
+            Participantes par = ganador.get(i);
+            
+        }
         return null;
     }
-
     
     
 }
