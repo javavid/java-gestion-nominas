@@ -39,11 +39,20 @@ public class Carrera extends EventoDeportivo{
     @Override
     public ArrayList<Participantes> obtenerGanador() {
         ArrayList<Participantes> ganador = new ArrayList<>();
-        for (int i = 0; i < ganador.size(); i++) {
-            Participantes par = ganador.get(i);
-            
+        if (participantesCarrera == null || participantesCarrera.isEmpty()) {
+            return ganador;
         }
-        return null;
+
+        ParticipantesCarrera partcrr = participantesCarrera.get(0);
+
+            for (ParticipantesCarrera p : participantesCarrera) {
+                if (p.getTiempoRegistrado() < partcrr.getTiempoRegistrado()) {
+                    partcrr = p;
+                }
+            }
+            ganador.add(partcrr);
+            return ganador;
+        
     }
     
     
