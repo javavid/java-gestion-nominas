@@ -4,27 +4,47 @@ import java.util.ArrayList;
 
 
 
-public class Equipos {
+public class Equipos extends Participantes  {
     
-    private String nombre;
+    private String nombreEquipo;
     private ArrayList<Participantes> participantes;
     private int puntos = 0;
 
 
-    public Equipos(String nombre, ArrayList<Participantes> participantes, int puntos) {
-        this.nombre = nombre;
-        this.participantes = (participantes != null)? new ArrayList<>(participantes) : new ArrayList<>();
+    
+
+    public Equipos(String nombre, String apellido, int edad, String nombreEquipo,
+            ArrayList<Participantes> participantes, int puntos) {
+        super(nombre, apellido, edad);
+        this.nombreEquipo = nombreEquipo;
+        this.participantes = participantes;
         this.puntos = puntos;
     }
 
 
-    public String getNombre() {
-        return nombre;
+    public void eliminarJugador(String nombre, String apellido) throws JugadorNoEncontrado
+    {
+        for(int i = 0; i < participantes.size(); i++) {
+            Participantes pa = participantes.get(i);
+            if (pa.getNombre().equals(nombre) && pa.getApellido().equals(apellido)) {
+                this.participantes.remove(i);
+                return ;
+                
+            }
+            
+        }
+        
+        throw new JugadorNoEncontrado(nombre, apellido);
+
+    }
+
+    public String getNombreEquipo() {
+        return nombreEquipo;
     }
 
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreEquipo(String nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
     }
 
 
@@ -47,36 +67,10 @@ public class Equipos {
         this.puntos = puntos;
     }
 
-    
-    public void añadirJugador(Participantes participantes)
-    {
-        if (participantes != null)
-        {
-            this.participantes.add(participantes);    
-        }
-    }
-
-    public void eliminarLibro(String nombre, String apellido) throws JugadorNoEncontrado
-    {
-        for(int i = 0; i < participantes.size(); i++) {
-            Participantes pa = participantes.get(i);
-            if (pa.getNombre().equals(nombre) && pa.getApellido().equals(apellido)) {
-                this.participantes.remove(i);
-                return ;
-                
-            }
-            
-        }
-        
-        throw new JugadorNoEncontrado(nombre, apellido);
-
-    }
-
-
     @Override
     public String toString() {
         return 
-        "\nnombre: " + nombre + 
+        "\nnombre: " + nombreEquipo + 
         "\nparticipantes: " + participantes + 
         "\npuntos=" + puntos;
     }

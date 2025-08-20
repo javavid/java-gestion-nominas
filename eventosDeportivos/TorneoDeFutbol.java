@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public class TorneoDeFutbol extends EventoDeportivo{
     
     private ArrayList<Equipos> equipos;
-    private int puntosAcumulados;
+    
 
     public TorneoDeFutbol(String nombre, LocalDate fecha, String lugar, ArrayList<Participantes> participante,
-            ArrayList<Equipos> equipos, int puntosAcumulados) {
+            ArrayList<Equipos> equipos) {
         super(nombre, fecha, lugar, participante);
         this.equipos = equipos;
-        this.puntosAcumulados = puntosAcumulados;
+        
     }
 
     public ArrayList<Equipos> getEquipos() {
@@ -23,17 +23,21 @@ public class TorneoDeFutbol extends EventoDeportivo{
         this.equipos = equipos;
     }
 
-    public int getPuntosAcumulados() {
-        return puntosAcumulados;
-    }
-
-    public void setPuntosAcumulados(int puntosAcumulados) {
-        this.puntosAcumulados = puntosAcumulados;
-    }
-
     @Override
     public ArrayList<Participantes> obtenerGanador() {
-        
-        return null;
+        ArrayList<Participantes> ganador = new ArrayList<>();
+        if (equipos == null || equipos.isEmpty()) {
+            return ganador;
+        }
+
+        Equipos equip = equipos.get(0);
+
+        for (Equipos eq : equipos) {
+            if (eq.getPuntos() < equip.getPuntos()) {
+                equip = eq;
+            }
+        }
+        ganador.add(equip);
+        return ganador;
     }
 }
