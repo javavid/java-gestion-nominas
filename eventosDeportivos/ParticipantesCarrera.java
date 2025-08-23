@@ -4,7 +4,7 @@ public class ParticipantesCarrera extends Participantes {
 
     private int tiempoRegistrado;
 
-    public ParticipantesCarrera(String nombre, String apellido, int edad, int tiempoRegistrado) {
+    public ParticipantesCarrera(String nombre, String apellido, int edad, int tiempoRegistrado) throws Exception {
         super(nombre, apellido, edad);
         this.tiempoRegistrado = tiempoRegistrado;
     }

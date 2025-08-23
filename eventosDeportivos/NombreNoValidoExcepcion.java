@@ -2,15 +2,14 @@ package eventosDeportivos;
 
 public class NombreNoValidoExcepcion extends Exception {
     
-    private String nombre;
 
-    public NombreNoValidoExcepcion(String nombre) {
-        this.nombre = nombre;
+    public NombreNoValidoExcepcion() {
+        super("Nombre No Valido");
     }
 
-    @Override
-    public String toString() {
-        return " Nombre (" + nombre + ") No Valido. ";
+    public NombreNoValidoExcepcion(String mensage) {
+        super("Nombre No Valido");
     }
+    
 
 }

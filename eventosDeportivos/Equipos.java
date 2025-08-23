@@ -14,7 +14,7 @@ public class Equipos extends Participantes  {
     
 
     public Equipos(String nombre, String apellido, int edad, String nombreEquipo,
-            ArrayList<Participantes> participantes, int puntos) {
+            ArrayList<Participantes> participantes, int puntos) throws Exception {
         super(nombre, apellido, edad);
         this.nombreEquipo = nombreEquipo;
         this.participantes = participantes;

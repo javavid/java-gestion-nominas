@@ -6,7 +6,21 @@ public class Participantes {
     private String apellido;
     private int edad;
     
-    public Participantes(String nombre, String apellido, int edad) {
+    public Participantes(String nombre, String apellido, int edad) throws Exception
+    {
+        if (nombre == null || nombre.length() == 0) {
+            throw new NombreNoValidoExcepcion();
+        }
+
+        if (apellido == null || apellido.length() == 0) {
+            throw new ApellidoNoValidoExcepcion();
+        }
+
+        if (edad < 14) {
+            throw new EdadNoValidaExcepcion();
+        }
+
+        
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
