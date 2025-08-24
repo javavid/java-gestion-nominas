@@ -8,10 +8,9 @@ public class TorneoDeFutbol extends EventoDeportivo{
     private ArrayList<Equipos> equipos;
     
 
-    public TorneoDeFutbol(String nombre, LocalDate fecha, String lugar, ArrayList<Participantes> participante,
-            ArrayList<Equipos> equipos) {
-        super(nombre, fecha, lugar, participante);
-        this.equipos = equipos;
+    public TorneoDeFutbol(String nombre, LocalDate fecha, String lugar) {
+        super(nombre, fecha, lugar);
+        this.equipos = new ArrayList<>();
         
     }
 
@@ -40,4 +39,22 @@ public class TorneoDeFutbol extends EventoDeportivo{
         ganador.add(equip);
         return ganador;
     }
+
+    @Override
+    public String toString() {
+        return 
+        super.toString() +
+        "equipos= " + equipos;
+    }
+
+    @Override
+    public void inscribirParticipante(Participantes participante) {
+        if (participante instanceof Equipos) {
+    equipos.add((Equipos) participante);
+}
+        
+    }
+
+    
+    
 }

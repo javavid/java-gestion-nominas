@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 
-public class Equipos extends Participantes  {
+public class Equipos extends Participantes {
     
     private String nombreEquipo;
     private ArrayList<Participantes> participantes;
@@ -13,11 +13,10 @@ public class Equipos extends Participantes  {
 
     
 
-    public Equipos(String nombre, String apellido, int edad, String nombreEquipo,
-            ArrayList<Participantes> participantes, int puntos) throws Exception {
+    public Equipos(String nombre, String apellido, int edad, String nombreEquipo, int puntos) throws Exception {
         super(nombre, apellido, edad);
         this.nombreEquipo = nombreEquipo;
-        this.participantes = participantes;
+        this.participantes = new ArrayList<>();
         this.puntos = puntos;
     }
 

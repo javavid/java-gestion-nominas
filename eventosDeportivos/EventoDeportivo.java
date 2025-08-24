@@ -8,13 +8,13 @@ public abstract class EventoDeportivo implements Ganador {
     private String nombre;
     private LocalDate fecha;
     private String lugar;
-    private ArrayList<Participantes> participante;
     
-    public EventoDeportivo(String nombre, LocalDate fecha, String lugar, ArrayList<Participantes> participante) {
+    
+    public EventoDeportivo(String nombre, LocalDate fecha, String lugar) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.lugar = lugar;
-        this.participante = (participante != null)? new ArrayList<>(participante) : new ArrayList<>();
+        
 
         
     }
@@ -36,20 +36,9 @@ public abstract class EventoDeportivo implements Ganador {
     public void setLugar(String lugar) {
         this.lugar = lugar;
     }
-    public ArrayList<Participantes> getParticipante() {
-        return participante;
-    }
-    public void setParticipante(ArrayList<Participantes> participante) {
-        this.participante = participante;
-    }
 
-    public void inscribirParticipante(Participantes participante)
-    {
-        if(participante != null)
-        {
-            this.participante.add(participante);
-        }
-    }
+    public abstract void inscribirParticipante(Participantes participante);
+    
     
     @Override
     public abstract ArrayList<Participantes> obtenerGanador();

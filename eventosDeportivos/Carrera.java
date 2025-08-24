@@ -8,15 +8,11 @@ public class Carrera extends EventoDeportivo{
     private double distancia;
 
     ArrayList<ParticipantesCarrera> participantesCarrera;
-    
 
-    
-
-    public Carrera(String nombre, LocalDate fecha, String lugar, ArrayList<Participantes> participante,
-            double distancia, ArrayList<ParticipantesCarrera> participantesCarreras ) {
-        super(nombre, fecha, lugar, participante);
+    public Carrera(String nombre, LocalDate fecha, String lugar,double distancia) {
+        super(nombre, fecha, lugar);
         this.distancia = distancia;
-        this.participantesCarrera = participantesCarreras;
+        this.participantesCarrera = new ArrayList<>();
         
     }
 
@@ -52,6 +48,23 @@ public class Carrera extends EventoDeportivo{
             }
             ganador.add(partcrr);
             return ganador;
+        
+    }
+
+    @Override
+    public String toString() {
+        return 
+        super.toString() +
+        "distancia= " + distancia + 
+        "participantesCarrera= " + participantesCarrera +
+        "obtenerGanador= " + obtenerGanador();
+    }
+
+    @Override
+    public void inscribirParticipante(Participantes participante) {
+        if (participante instanceof ParticipantesCarrera) {
+    participantesCarrera.add((ParticipantesCarrera) participante);
+}
         
     }
     
