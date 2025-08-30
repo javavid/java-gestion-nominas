@@ -20,12 +20,15 @@ public class Instituto {
 
         grupo.eliminarPorEdad(14);
 
+
+        grupo.listarAlumnos();
+
         // aqui se itera el metodo de la clase grpo que a su vez implementa la clase IteradorGrupo.
-        Iterator<Alumno> alumnos = grupo.iterator();
+        /*Iterator<Alumno> alumnos = grupo.iterator();
         while (alumnos.hasNext())
         {
             System.out.println(alumnos.next());    
-        }
+        }*/
 
         /*for (Alumno alumno : grupo) {
             System.out.println(alumno);

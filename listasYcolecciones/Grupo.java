@@ -42,6 +42,14 @@ public class Grupo implements Iterable<Alumno>{
         }
     }
 
+    public void listarAlumnos()
+    {
+        Iterator<Alumno> iterarAlumnos = alumnos.iterator();
+        while (iterarAlumnos.hasNext()) {
+            System.out.println(iterarAlumnos.next());
+        }
+    }
+
     @Override
     public Iterator<Alumno> iterator() {
         // se implementa o se instancia la clase IteradorGrupo.
