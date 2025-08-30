@@ -32,6 +32,16 @@ public class Grupo implements Iterable<Alumno>{
         alumnos.add(alumno);
     }
 
+    public void eliminarPorEdad(int n)
+    {
+        Iterator<Alumno> alummnos = alumnos.iterator();
+        while (alummnos.hasNext()) {
+            if (alummnos.next().getEdad() < n) alummnos.remove(); {
+                
+            }
+        }
+    }
+
     @Override
     public Iterator<Alumno> iterator() {
         // se implementa o se instancia la clase IteradorGrupo.
