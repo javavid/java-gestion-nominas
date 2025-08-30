@@ -25,6 +25,7 @@ public class IteradorGrupo implements Iterator<Alumno>{
 
     @Override
     public Alumno next() {
+        // Usando un Iterator y llamas a .next() sin verificar si hay más elementos con .hasNext().
         if (!hasNext()) {
             throw new NoSuchElementException();
         }
