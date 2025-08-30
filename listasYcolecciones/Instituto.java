@@ -9,15 +9,20 @@ public class Instituto {
 
         Grupo grupo = new Grupo("A");
 
-        grupo.agregarGrupos(new Alumno("salomon", "vanegas", 13));
-        grupo.agregarGrupos(new Alumno("sofia", "palmers", 12));
-        grupo.agregarGrupos(new Alumno("sebastian", "furtido", 11));
-        grupo.agregarGrupos(new Alumno("vanesa", "suarez", 14));
+        grupo.agregarAlumnoss(new Alumno("salomon", "vanegas", 19));
+        grupo.agregarAlumnoss(new Alumno("sofia", "palmers", 20));
+        grupo.agregarAlumnoss(new Alumno("sebastian", "furtido", 16));
+        grupo.agregarAlumnoss(new Alumno("vanesa", "suarez", 14));
 
+        // aqui se itera el metodo de la clase grpo que a su vez implementa la clase IteradorGrupo.
         Iterator<Alumno> alumnos = grupo.iterator();
         while (alumnos.hasNext())
         {
             System.out.println(alumnos.next());    
         }
+
+        /*for (Alumno alumno : grupo) {
+            System.out.println(alumno);
+        }*/
     }
 }

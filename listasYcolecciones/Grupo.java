@@ -27,15 +27,17 @@ public class Grupo implements Iterable<Alumno>{
         this.alumnos = alumnos;
     }
 
-    public void agregarGrupos(Alumno alumno)
+    public void agregarAlumnoss(Alumno alumno)
     {
         alumnos.add(alumno);
     }
 
     @Override
     public Iterator<Alumno> iterator() {
-        
-        return alumnos.iterator();
+        // se implementa o se instancia la clase IteradorGrupo.
+        // la cual tiene una condicion, que los Alumnos de igual o menor edad a 14 no se impriman.
+        // si son mallores si se imprimiran.
+        return new IteradorGrupo(alumnos);
     }
 
     
