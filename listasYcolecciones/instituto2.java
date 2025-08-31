@@ -18,7 +18,8 @@ public class instituto2 {
         alumnos.add(new Alumno("pedro", "menez", 18));
         alumnos.add(new Alumno("shascha", "zuñiga", 9));
 
-        Collections.sort(alumnos);
+        //Collections.sort(alumnos);
+        Collections.sort(alumnos, new OrdenarPorEdadComparador());
         System.out.println(alumnos);
 
         alumnos.add(new Alumno("arequipe", "manzanares", 17));
@@ -26,7 +27,8 @@ public class instituto2 {
         alumnos.add(new Alumno("rosa", "bahs", 20));
 
         System.out.println(" ");
-        Collections.sort(alumnos);
+        //Collections.sort(alumnos);
+        Collections.sort(alumnos, new OrdenarPorEdadComparador());
         System.out.println(alumnos);
     }
 }

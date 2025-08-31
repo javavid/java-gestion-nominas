@@ -1,6 +1,6 @@
 package listasYcolecciones;
 
-public class Alumno implements Comparable<Alumno>{
+public class Alumno /*implements Comparable<Alumno>*/{
     private String nombre;
     private String apellido;
     private int edad;
@@ -52,12 +52,12 @@ public class Alumno implements Comparable<Alumno>{
     }
 
 
-    @Override
+   /*  @Override
     public int compareTo(Alumno a) {
         int comparacion = Integer.compare(this.edad, a.edad);// ordena por edad. si cambian el orden del .compare asi (a.edad, this.edad) ordenara de mayor a menor.
         if (comparacion == 0 ) comparacion = this.nombre.compareTo(a.nombre);// si la edad son las mismas ordena por nombre en forma alfabetica.
         return comparacion;
-    }
+    }*/
 
     
 }
