@@ -46,9 +46,46 @@ public class Alumno /*implements Comparable<Alumno>*/{
     @Override
     public String toString() {
         return 
-        "\nNOMBRE= " + nombre + 
+        "\nNOMBRE= " + nombre; /*+ 
         ", APELLIDO= " + apellido + 
-        ", EDAD= " + edad;
+        ", EDAD= " + edad;*/
+    }
+
+
+    // metodos hashCode y equals para la interface Set<E> y HasSet<E>.
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+        result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
+        result = prime * result + edad;
+        return result;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Alumno other = (Alumno) obj;
+        if (nombre == null) {
+            if (other.nombre != null)
+                return false;
+        } else if (!nombre.equals(other.nombre))
+            return false;
+        if (apellido == null) {
+            if (other.apellido != null)
+                return false;
+        } else if (!apellido.equals(other.apellido))
+            return false;
+        if (edad != other.edad)
+            return false;
+        return true;
     }
 
 
