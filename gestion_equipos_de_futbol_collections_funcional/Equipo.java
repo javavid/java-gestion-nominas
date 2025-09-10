@@ -29,29 +29,12 @@ public class Equipo {
         this.futbolistas = futbolistas;
     }
 
-    public void agrgarFutbolista(Futbolista futbolista)
+    public void agrgarFutbolista(Futbolista futbolista) 
     {
-        if (futbolista != null) { 
-
-            
+        if (futbolista != null)
+        { 
                 this.futbolistas.add(futbolista);
-            
-             
-    
         }
     }
 
-    /*public void agregarFutbolista(Futbolista futbolista) {
-    if (futbolista != null) {
-        long cantidadPorteros = futbolistas.stream()
-            .filter(f -> f.getPosicion() == Posicion.PORTERO)
-            .count();
-
-        if (futbolista.getPosicion() == Posicion.PORTERO && cantidadPorteros >= 3) {
-            throw new IllegalStateException("No se pueden agregar más de 3 porteros.");
-        }
-
-        futbolistas.add(futbolista);
-    }
-}*/
 }
