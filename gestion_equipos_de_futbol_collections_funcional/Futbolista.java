@@ -47,16 +47,6 @@ public class Futbolista implements Deportista{
         this.posicion = posicion;
     }
 
-
-    @Override
-    public String toString() {
-        return 
-        "\nnombreFutbolista=" + nombreFutbolista + 
-        "\nedad=" + edad + 
-        "\nposicion=" + posicion;
-    }
-
-
     @Override
     public int getAnosProfecional() {
         return 0;
@@ -72,5 +62,13 @@ public class Futbolista implements Deportista{
     @Override
     public int getTotalTrofeos() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return 
+        "\nnombreFutbolista=" + nombreFutbolista + 
+        "\nedad=" + edad + 
+        "\nposicion=" + posicion;
     }
 }
