@@ -58,8 +58,8 @@ public class Futbolista implements Deportista{
 
 
     @Override
-    public void getAnosProfecional() {
-        
+    public int getAnosProfecional() {
+        return 0;
     }
 
 
@@ -70,7 +70,7 @@ public class Futbolista implements Deportista{
 
 
     @Override
-    public void getTotalTrofeos() {
-        
+    public int getTotalTrofeos() {
+        return 0;
     }
 }
