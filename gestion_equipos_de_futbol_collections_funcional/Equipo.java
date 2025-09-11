@@ -1,6 +1,7 @@
 package gestion_equipos_de_futbol_collections_funcional;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Equipo {
     
@@ -37,4 +38,13 @@ public class Equipo {
         }
     }
 
+    public void listarFormacionEquipo()
+    {
+         futbolistas.stream()
+        .sorted(new OrdenarPorPosiciones())
+        .forEach(System.out::print);
+
+    }
+
+    
 }

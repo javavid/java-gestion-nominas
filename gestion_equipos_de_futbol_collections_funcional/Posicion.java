@@ -10,9 +10,9 @@ public enum Posicion {
     private final int salarioMax;
     private final int salarioMin;
 
-    Posicion(int salarioMax, int salarioMin){
-        this.salarioMax = salarioMax;
+    Posicion(int salarioMin, int salarioMax){
         this.salarioMin = salarioMin;
+        this.salarioMax = salarioMax;
     }
 
     public int getSalarioMax(){
@@ -23,9 +23,4 @@ public enum Posicion {
         return salarioMin;
     }
 
-
-    // ejemplo de como hacer un set manual para cuando no sirva el automatico.
-    /*public void setSalarioMax(int salarioMax){
-        this.salarioMax = salarioMax;
-    }*/
 }
