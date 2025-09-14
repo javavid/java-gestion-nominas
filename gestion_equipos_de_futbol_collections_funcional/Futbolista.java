@@ -67,8 +67,9 @@ public class Futbolista implements Deportista{
     @Override
     public String toString() {
         return 
+        
         "\nnombreFutbolista=" + nombreFutbolista + 
         "\nedad=" + edad + 
-        "\nposicion=" + posicion;
+        "\nposicion=" + posicion + "\n";
     }
 }

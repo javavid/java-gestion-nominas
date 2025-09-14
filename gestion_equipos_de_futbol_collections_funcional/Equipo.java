@@ -40,11 +40,14 @@ public class Equipo {
 
     public void listarFormacionEquipo()
     {
+        System.out.println("\n NombreEquipo: " + nombreEquipo);
          futbolistas.stream()
         .sorted(new OrdenarPorPosiciones())
         .forEach(System.out::print);
 
     }
+
+    
 
     
 }
