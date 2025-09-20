@@ -1,1 +1,22 @@
-como no somos nada yaaa, ahora soy lo peor verdaaad, tus amigas me han diiicho yaaa. 
+esto es un texto sin salto de linea. NUEVA PALABRA.
+esto es un texto con salto de linea.
+4.5455
+6
+8
+10
+12
+14
+16
+18
+20
+esto es un texto sin salto de linea. NUEVA PALABRA.
+esto es un texto con salto de linea.
+4.5455
+6
+8
+10
+12
+14
+16
+18
+20
