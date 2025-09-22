@@ -1,0 +1,12 @@
+comandos para ejecutar en la terminal:
+
+copilar el archivo java:
+javac -cp "Connector_MySQL\mysql-connector-j-9.4.0.jar" ConexionMySQL.java
+
+
+ejecutar el programa:
+java -cp ".;Connector_MySQL\mysql-connector-j-9.4.0.jar" ConexionMySQL
+
+
+para ejecutar los dos archivos anteriores en general se ubican en  un archivo .bat:
+.\conexionMySQLComandosEjecutables.bat
