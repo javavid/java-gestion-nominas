@@ -4,6 +4,7 @@
         "ejercicioGestionNominas.java"
     ],
     "java.project.referencedLibraries": [
-        "Connector_MySQL\\mysql-connector-j-9.4.0.jar"
+        "BCrypt\\jBCrypt-0.4.3.jar",
+        "c:\\java-gestion-nominas\\Connector_MySQL\\mysql-connector-j-9.4.0.jar"
     ]
 }
